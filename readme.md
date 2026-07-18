@@ -12,7 +12,7 @@ La regresión lineal es probablemente el algoritmo de Machine Learning más cono
 
 Y está bien, para producción o a la práctica, eso es exactamente lo que hay que hacer.
 
-Pero hay algo que me llamaba la atención: **¿cuánta gente que usa regresión lineal ha derivado alguna vez la función de coste?** ¿Cuántos saben de dónde sale la regla de actualización de los parámetros θ, o por qué se usa el error cuadrático `x²` en vez del absoluto `|x|`?
+Pero hay algo que me llamaba la atención: **¿cuánta gente que usa regresión lineal ha derivado alguna vez la función de coste?** ¿Cuántos saben de dónde sale la regla de actualización de los parámetros θ, o por qué se usa el error cuadrático $x^2$ en vez del absoluto $|x|$?
 
 Este proyecto nació de esa curiosidad. Quería entender el algoritmo de verdad, desde las matemáticas, sin que ninguna librería me ocultara lo que pasa por dentro. Así que lo implementé desde cero, derivando las fórmulas originales a mano y traduciéndolas directamente a código.
 
@@ -43,11 +43,11 @@ $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$
 
 Función de coste:
 
-$$J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2$$
+$$J(\theta) = \frac{1}{2} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2$$
 
 Gradiente (derivado explícitamente en el notebook):
 
-$$\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right) \cdot x_j^{(i)}$$
+$$\frac{\partial J}{\partial \theta_j} = \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right) \cdot x_j^{(i)}$$
 
 ---
 
@@ -77,6 +77,7 @@ jupyter notebook descenso_gradiente.ipynb
 ```
 .
 ├── descenso_gradiente.ipynb   # El notebook principal
+├── casas.csv                  # Dataset
 ├── Gradient_descent.gif
 └── README.md
 ```
