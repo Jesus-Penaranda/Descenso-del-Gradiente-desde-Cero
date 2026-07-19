@@ -8,7 +8,7 @@
 
 ## Motivación
 
-La regresión lineal es probablemente el algoritmo de Machine Learning más conocido. Todo el mundo lo ha usado. La mayoría de la gente llama a `sklearn.fit()` y sigue adelante.
+La regresión lineal es probablemente el algoritmo de Machine Learning más conocido. Todo el mundo lo ha usado. La mayoría de la gente llama a `sklearn.fit()` (u otras librerías de ML) y sigue adelante.
 
 Y está bien, para producción o a la práctica, eso es exactamente lo que hay que hacer.
 
@@ -28,7 +28,7 @@ Un notebook de Jupyter que cubre, paso a paso:
 - **La función de coste** $J(\theta)$ demostración de por qué se usa el error cuadrático (y no el valor absoluto)
 - **Derivación completa** de la regla de actualización, desde $J(\theta)$ hasta la fórmula final
 - **Los tres tipos de descenso de gradiente**: Batch, Estocástico (SGD) y Mini-Batch
-- **Visualizaciones**: superficie de coste en 3D, trayectoria del gradiente, curvas de convergencia, efecto del learning rate
+- **Visualizaciones**: superficie de coste en 3D, trayectoria del gradiente, curvas de convergencia, efecto del learning rate etc.
 - **Extensión a múltiples features** sin cambiar ni una línea del algoritmo
 
 Todo sobre un dataset mítico del precios de diferentes casas, para mantenerlo sencillo y enfocado en el algoritmo.
@@ -56,7 +56,8 @@ $$\frac{\partial J}{\partial \theta_j} = \sum_{i=1}^{m} \left( h_\theta(x^{(i)})
 ```
 Python 3.x
 NumPy        # toda la matemática
-Matplotlib   # visualizaciones
+Pandas       # Control de los datos
+Matplotlib, Seaborn   # visualizaciones
 ```
 
 ---
