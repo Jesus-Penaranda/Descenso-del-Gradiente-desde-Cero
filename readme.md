@@ -16,8 +16,6 @@ Pero hay algo que me llamaba la atención: **¿cuánta gente que usa regresión 
 
 Este proyecto nació de esa curiosidad. Quería entender el algoritmo de verdad, desde las matemáticas, sin que ninguna librería me ocultara lo que pasa por dentro. Así que lo implementé desde cero, derivando las fórmulas originales a mano y traduciéndolas directamente a código.
 
-Si tú también tienes esa curiosidad, este notebook es para ti.
-
 ---
 
 ## ¿Qué hay aquí?
